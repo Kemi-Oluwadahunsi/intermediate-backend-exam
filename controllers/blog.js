@@ -67,7 +67,7 @@ const aPublishedBlog = async (req, res) => {
 
 const getAllBlogs = async (req, res) => {
   try {
-    let { page, limit, author, title, tags, sortBy, sortDirection } = req.query;
+    let { page, limit, author, title, tags, sortBy, sortDirection, state } = req.query;
     page = parseInt(page) || 1;
     limit = parseInt(limit) || 20;
     const skip = (page - 1) * limit;
@@ -105,7 +105,7 @@ const getAllBlogs = async (req, res) => {
     ) {
       sortOptions[sortBy] = sortDirection === "desc" ? -1 : 1;
     } else {
-      sortOptions.createdAt = -1; // Default sorting by createdAt in descending order
+      sortOptions.createdAt = -1;
     }
 
     const blogs = await Blog.find(query)
