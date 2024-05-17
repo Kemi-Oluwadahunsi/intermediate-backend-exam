@@ -120,7 +120,6 @@ const getAllBlogs = async (req, res) => {
   }
 };
 
-
 const updateBlog = async (req, res) => {
   const userId = req.user.id;
   const blogId = req.params.id;
@@ -132,7 +131,9 @@ const updateBlog = async (req, res) => {
     }
 
     if (blog.author.toString() !== userId) {
-      return res.status(403).json({ error: "You are not authorized to update this blog" });
+      return res
+        .status(403)
+        .json({ error: "You are not authorized to update this blog" });
     }
 
     if (title) {
@@ -172,7 +173,9 @@ const updateBlogState = async (req, res) => {
     }
 
     if (blog.author.toString() !== userId) {
-      return res.status(403).json({ error: "You are not authorized to update this blog" });
+      return res
+        .status(403)
+        .json({ error: "You are not authorized to update this blog" });
     }
 
     if (state && ["draft", "published"].includes(state)) {
@@ -182,7 +185,9 @@ const updateBlogState = async (req, res) => {
     }
 
     await blog.save();
-    res.status(200).json({ message: "Blog state updated successfully", data: blog });
+    res
+      .status(200)
+      .json({ message: "Blog state updated successfully", data: blog });
   } catch (error) {
     res
       .status(500)
@@ -200,17 +205,20 @@ const deleteBlog = async (req, res) => {
     }
 
     if (blog.author.toString() !== userId) {
-      return res.status(403).json({ error: "You are not authorized to delete this blog" });
+      return res
+        .status(403)
+        .json({ error: "You are not authorized to delete this blog" });
     }
 
     await blog.remove();
     res.status(200).json({ message: "Blog deleted successfully" });
   } catch (error) {
-    res.status(500).json({ error: error.message, message: "Internal server error" });
+    res
+      .status(500)
+      .json({ error: error.message, message: "Internal server error" });
   }
 };
-
-export const getUserBlogs = async (req, res) => {
+const getUserBlogs = async (req, res) => {
   const userId = req.user.id;
 
   const { page = 1, limit = 10, state } = req.query;
