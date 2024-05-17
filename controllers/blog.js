@@ -72,7 +72,15 @@ const getAllBlogs = async (req, res) => {
     limit = parseInt(limit) || 20;
     const skip = (page - 1) * limit;
 
-    let query = { state: "published" };
+    // let query = { state: "published" };
+
+     let query = {};
+
+     if (state) {
+       query.state = state;
+     } else {
+       query.state = { $in: ["published", "draft"] };
+     }
 
     if (author) {
       const authors = await User.find({
