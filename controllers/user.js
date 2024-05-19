@@ -19,7 +19,7 @@ const register = async (req, res) => {
       password,
     });
     savedUser = await newUser.save();
-    res.status(201).json({ message: "Registration completed", User });
+    res.status(201).json({ message: "Registration completed", savedUser });
   } catch (error) {
     res.status(500).json({ error: "Internal Server error" });
   }
