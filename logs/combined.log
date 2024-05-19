@@ -1,0 +1,170 @@
+2024-05-19 17:04:23 warn: Authentication failed: Invalid token.
+2024-05-19 17:29:55 info: User authenticated successfully: 664785cc73401c58054edb8f
+2024-05-19 17:29:55 info: Request to create a new blog received.
+2024-05-19 17:30:05 error: Internal server error: Operation `blogs.findOne()` buffering timed out after 10000ms
+2024-05-19 17:41:39 info: User authenticated successfully: 664785cc73401c58054edb8f
+2024-05-19 17:41:39 info: Request to create a new blog received.
+2024-05-19 17:41:40 info: Calculated reading time: 1 minute(s) for blog with 3 words.
+2024-05-19 17:41:41 info: Blog created successfully by user 664785cc73401c58054edb8f
+2024-05-19 17:41:41 info: Request to get all published blogs received.
+2024-05-19 17:41:41 info: Fetched all published blogs.
+2024-05-19 17:41:41 info: Request to get published blog with ID 6649c95589ad83b4c854e91d received.
+2024-05-19 17:41:41 info: Fetched a published blog.
+2024-05-19 17:41:42 info: Request to get published blog with ID owner received.
+2024-05-19 17:41:42 error: Internal server error: Cast to ObjectId failed for value "{ _id: 'owner' }" (type Object) at path "_id" for model "Blog"
+2024-05-19 17:46:27 info: User registered successfully with email: kemilat50@gmail.com
+2024-05-19 17:46:27 warn: User registration failed: Missing required fields.
+2024-05-19 17:46:28 info: User registered successfully with email: kemilat50@gmail.com
+2024-05-19 17:46:28 warn: User registration failed: Email 'kemilat50@gmail.com' already exists.
+2024-05-19 17:46:28 info: User registered successfully with email: kemilat50@gmail.com
+2024-05-19 17:46:29 info: User logged in successfully with email: kemilat50@gmail.com
+2024-05-19 17:46:29 info: User registered successfully with email: kemilat50@gmail.com
+2024-05-19 17:46:29 warn: User login failed: Missing email or password.
+2024-05-19 17:46:30 info: User registered successfully with email: kemilat50@gmail.com
+2024-05-19 17:48:12 info: User authenticated successfully: 664785cc73401c58054edb8f
+2024-05-19 17:48:12 info: Request to create a new blog received.
+2024-05-19 17:48:13 error: Blog creation failed: Title 'Test Blog' already exists.
+2024-05-19 17:53:10 info: User registered successfully with email: kemilat50@gmail.com
+2024-05-19 17:53:10 warn: User registration failed: Missing required fields.
+2024-05-19 17:53:10 info: User registered successfully with email: kemilat50@gmail.com
+2024-05-19 17:53:10 warn: User registration failed: Email 'kemilat50@gmail.com' already exists.
+2024-05-19 17:53:11 info: User registered successfully with email: kemilat50@gmail.com
+2024-05-19 17:53:11 info: User logged in successfully with email: kemilat50@gmail.com
+2024-05-19 17:53:11 info: User registered successfully with email: kemilat50@gmail.com
+2024-05-19 17:53:11 warn: User login failed: Missing email or password.
+2024-05-19 17:53:12 info: User registered successfully with email: kemilat50@gmail.com
+2024-05-19 17:53:12 warn: User login failed: Error: Incorrect password or email
+2024-05-19 17:53:13 info: User authenticated successfully: 664785cc73401c58054edb8f
+2024-05-19 17:53:13 info: Request to create a new blog received.
+2024-05-19 17:53:15 error: Blog creation failed: Title 'Test Blog' already exists.
+2024-05-19 18:20:29 info: User registered successfully with email: testuser@example.com
+2024-05-19 18:20:30 info: User logged in successfully with email: testuser@example.com
+2024-05-19 18:20:30 info: User authenticated successfully: 6649d26ddc66f8334d751eaa
+2024-05-19 18:20:30 info: Request to create a new blog received.
+2024-05-19 18:20:30 error: Internal server error: Cannot read properties of undefined (reading 'trim')
+2024-05-19 18:20:31 info: User logged in successfully with email: testuser@example.com
+2024-05-19 18:46:35 warn: Authentication failed: Invalid token.
+2024-05-19 18:46:37 info: Request to get all published blogs received.
+2024-05-19 18:46:37 info: Fetched all published blogs.
+2024-05-19 18:46:38 info: Request to get published blog with ID 6649d88ef2492b8e2d88ce46 received.
+2024-05-19 18:46:38 info: Fetched a published blog.
+2024-05-19 18:46:38 warn: Authentication failed: Invalid token.
+2024-05-19 18:46:38 info: Request to get published blog with ID owner received.
+2024-05-19 18:46:38 error: Internal server error: Cast to ObjectId failed for value "{ _id: 'owner' }" (type Object) at path "_id" for model "Blog"
+2024-05-19 18:49:29 info: User authenticated successfully: 6649cc080fb7931418de12d4
+2024-05-19 18:49:29 info: Request to create a new blog received.
+2024-05-19 18:49:31 error: Blog creation failed: Title 'Test Blog' already exists.
+2024-05-19 18:51:03 info: User authenticated successfully: 6649cc080fb7931418de12d4
+2024-05-19 18:51:03 info: Request to create a new blog received.
+2024-05-19 18:51:04 info: Calculated reading time: 1 minute(s) for blog with 3 words.
+2024-05-19 18:51:04 info: Blog created successfully by user 6649cc080fb7931418de12d4
+2024-05-20 00:07:30 warn: User registration failed: Email 'kemilat50@gmail.com' already exists.
+2024-05-20 00:07:30 warn: User registration failed: Missing required fields.
+2024-05-20 00:07:31 warn: User registration failed: Email 'kemilat50@gmail.com' already exists.
+2024-05-20 00:07:31 warn: User registration failed: Email 'kemilat50@gmail.com' already exists.
+2024-05-20 00:07:31 warn: User registration failed: Email 'kemilat50@gmail.com' already exists.
+2024-05-20 00:07:31 info: User logged in successfully with email: kemilat50@gmail.com
+2024-05-20 00:07:31 warn: User login failed: Missing email or password.
+2024-05-20 00:07:31 warn: User registration failed: Email 'kemilat50@gmail.com' already exists.
+2024-05-20 00:07:31 warn: User login failed: Incorrect password or email
+2024-05-20 00:09:22 info: User registered successfully with email: kemil@gmail.com
+2024-05-20 00:09:23 warn: User registration failed: Missing required fields.
+2024-05-20 00:09:23 warn: User registration failed: Email 'kemil@gmail.com' already exists.
+2024-05-20 00:09:23 warn: User registration failed: Email 'kemil@gmail.com' already exists.
+2024-05-20 00:09:23 warn: User registration failed: Email 'kemil@gmail.com' already exists.
+2024-05-20 00:09:23 info: User logged in successfully with email: kemil@gmail.com
+2024-05-20 00:09:23 warn: User login failed: Missing email or password.
+2024-05-20 00:09:23 warn: User registration failed: Email 'kemil@gmail.com' already exists.
+2024-05-20 00:09:23 warn: User login failed: Incorrect password or email
+2024-05-20 00:12:29 info: User registered successfully with email: king@gmail.com
+2024-05-20 00:12:29 warn: User registration failed: Missing required fields.
+2024-05-20 00:12:29 warn: User registration failed: Email 'king@gmail.com' already exists.
+2024-05-20 00:12:29 warn: User registration failed: Email 'king@gmail.com' already exists.
+2024-05-20 00:12:30 warn: User registration failed: Email 'king@gmail.com' already exists.
+2024-05-20 00:12:30 info: User logged in successfully with email: king@gmail.com
+2024-05-20 00:12:30 warn: User login failed: Missing email or password.
+2024-05-20 00:12:30 warn: User registration failed: Email 'king@gmail.com' already exists.
+2024-05-20 00:12:30 warn: User login failed: Incorrect password or email
+2024-05-20 00:12:31 warn: Authentication failed: Invalid token.
+2024-05-20 00:15:02 info: User authenticated successfully: 6649cc080fb7931418de12d4
+2024-05-20 00:15:02 info: Request to create a new blog received.
+2024-05-20 00:15:03 error: Blog creation failed: Title 'Testing Blog' already exists.
+2024-05-20 00:15:06 info: User registered successfully with email: kingy@gmail.com
+2024-05-20 00:15:07 warn: User registration failed: Missing required fields.
+2024-05-20 00:15:07 warn: User registration failed: Email 'kingy@gmail.com' already exists.
+2024-05-20 00:15:07 warn: User registration failed: Email 'kingy@gmail.com' already exists.
+2024-05-20 00:15:07 warn: User registration failed: Email 'kingy@gmail.com' already exists.
+2024-05-20 00:15:07 info: User logged in successfully with email: kingy@gmail.com
+2024-05-20 00:15:07 warn: User login failed: Missing email or password.
+2024-05-20 00:15:07 warn: User registration failed: Email 'kingy@gmail.com' already exists.
+2024-05-20 00:15:07 warn: User login failed: Incorrect password or email
+2024-05-20 00:16:40 info: User authenticated successfully: 6649cc080fb7931418de12d4
+2024-05-20 00:16:40 info: Request to create a new blog received.
+2024-05-20 00:16:41 info: Calculated reading time: 1 minute(s) for blog with 3 words.
+2024-05-20 00:16:41 info: Blog created successfully by user 6649cc080fb7931418de12d4
+2024-05-20 00:16:44 info: User registered successfully with email: kinging@gmail.com
+2024-05-20 00:16:44 warn: User registration failed: Missing required fields.
+2024-05-20 00:16:44 warn: User registration failed: Email 'kinging@gmail.com' already exists.
+2024-05-20 00:16:44 warn: User registration failed: Email 'kinging@gmail.com' already exists.
+2024-05-20 00:16:44 warn: User registration failed: Email 'kinging@gmail.com' already exists.
+2024-05-20 00:16:44 info: User logged in successfully with email: kinging@gmail.com
+2024-05-20 00:16:44 warn: User login failed: Missing email or password.
+2024-05-20 00:16:44 warn: User registration failed: Email 'kinging@gmail.com' already exists.
+2024-05-20 00:16:44 warn: User login failed: Incorrect password or email
+2024-05-20 00:22:40 info: User authenticated successfully: 6649cc080fb7931418de12d4
+2024-05-20 00:22:40 info: Request to create a new blog received.
+2024-05-20 00:22:41 info: Calculated reading time: 1 minute(s) for blog with 3 words.
+2024-05-20 00:22:41 info: Blog created successfully by user 6649cc080fb7931418de12d4
+2024-05-20 00:22:42 info: Request to get all published blogs received.
+2024-05-20 00:22:42 info: Fetched all published blogs.
+2024-05-20 00:22:43 info: Request to get published blog with ID owner received.
+2024-05-20 00:22:43 error: Internal server error: Cast to ObjectId failed for value "{ _id: 'owner' }" (type Object) at path "_id" for model "Blog"
+2024-05-20 00:22:46 info: User registered successfully with email: kingying@gmail.com
+2024-05-20 00:22:46 warn: User registration failed: Missing required fields.
+2024-05-20 00:22:46 warn: User registration failed: Email 'kingying@gmail.com' already exists.
+2024-05-20 00:22:46 warn: User registration failed: Email 'kingying@gmail.com' already exists.
+2024-05-20 00:22:47 warn: User registration failed: Email 'kingying@gmail.com' already exists.
+2024-05-20 00:22:47 info: User logged in successfully with email: kingying@gmail.com
+2024-05-20 00:22:47 warn: User login failed: Missing email or password.
+2024-05-20 00:22:47 warn: User registration failed: Email 'kingying@gmail.com' already exists.
+2024-05-20 00:22:47 warn: User login failed: Incorrect password or email
+2024-05-20 00:34:41 info: User authenticated successfully: 6649cc080fb7931418de12d4
+2024-05-20 00:34:41 info: Request to create a new blog received.
+2024-05-20 00:34:42 info: Calculated reading time: 1 minute(s) for blog with 3 words.
+2024-05-20 00:34:42 info: Blog created successfully by user 6649cc080fb7931418de12d4
+2024-05-20 00:34:42 info: Request to get all published blogs received.
+2024-05-20 00:34:42 info: Fetched all published blogs.
+2024-05-20 00:34:42 info: Request to get published blog with ID 664a2a221d382e98ba0404b5 received.
+2024-05-20 00:34:42 info: Fetched a published blog.
+2024-05-20 00:34:43 info: User authenticated successfully: 6649cc080fb7931418de12d4
+2024-05-20 00:34:43 info: Request to update state of blog with ID 664a2a231d382e98ba0404bc received.
+2024-05-20 00:34:43 error: Failed to update blog with id 664a2a231d382e98ba0404bc: Cannot read properties of undefined (reading 'toString')
+2024-05-20 00:34:45 info: User registered successfully with email: kemkem@gmail.com
+2024-05-20 00:34:45 warn: User registration failed: Missing required fields.
+2024-05-20 00:34:45 warn: User registration failed: Email 'kemkem@gmail.com' already exists.
+2024-05-20 00:34:45 warn: User registration failed: Email 'kemkem@gmail.com' already exists.
+2024-05-20 00:34:45 warn: User registration failed: Email 'kemkem@gmail.com' already exists.
+2024-05-20 00:34:46 info: User logged in successfully with email: kemkem@gmail.com
+2024-05-20 00:34:46 warn: User login failed: Missing email or password.
+2024-05-20 00:34:46 warn: User registration failed: Email 'kemkem@gmail.com' already exists.
+2024-05-20 00:34:46 warn: User login failed: Incorrect password or email
+2024-05-20 00:42:20 info: User authenticated successfully: 6649cc080fb7931418de12d4
+2024-05-20 00:42:20 info: Request to create a new blog received.
+2024-05-20 00:42:21 info: Calculated reading time: 1 minute(s) for blog with 3 words.
+2024-05-20 00:42:21 info: Blog created successfully by user 6649cc080fb7931418de12d4
+2024-05-20 00:42:21 info: Request to get all published blogs received.
+2024-05-20 00:42:21 info: Fetched all published blogs.
+2024-05-20 00:42:22 info: User authenticated successfully: 6649cc080fb7931418de12d4
+2024-05-20 00:42:22 info: Request to update state of blog with ID 664a2beef82bd04566666fb5 received.
+2024-05-20 00:42:22 error: Failed to update blog with id 664a2beef82bd04566666fb5: Cannot read properties of undefined (reading 'toString')
+2024-05-20 00:42:22 info: Request to get published blog with ID owner received.
+2024-05-20 00:42:22 error: Internal server error: Cast to ObjectId failed for value "{ _id: 'owner' }" (type Object) at path "_id" for model "Blog"
+2024-05-20 00:42:24 info: User registered successfully with email: gbengene@gmail.com
+2024-05-20 00:42:24 warn: User registration failed: Missing required fields.
+2024-05-20 00:42:24 warn: User registration failed: Email 'gbengene@gmail.com' already exists.
+2024-05-20 00:42:24 warn: User registration failed: Email 'gbengene@gmail.com' already exists.
+2024-05-20 00:42:24 warn: User registration failed: Email 'gbengene@gmail.com' already exists.
+2024-05-20 00:42:25 info: User logged in successfully with email: gbengene@gmail.com
+2024-05-20 00:42:25 warn: User login failed: Missing email or password.
+2024-05-20 00:42:25 warn: User registration failed: Email 'gbengene@gmail.com' already exists.
+2024-05-20 00:42:25 warn: User login failed: Incorrect password or email

@@ -1,0 +1,12 @@
+2024-05-19 17:30:05 error: Internal server error: Operation `blogs.findOne()` buffering timed out after 10000ms
+2024-05-19 17:41:42 error: Internal server error: Cast to ObjectId failed for value "{ _id: 'owner' }" (type Object) at path "_id" for model "Blog"
+2024-05-19 17:48:13 error: Blog creation failed: Title 'Test Blog' already exists.
+2024-05-19 17:53:15 error: Blog creation failed: Title 'Test Blog' already exists.
+2024-05-19 18:20:30 error: Internal server error: Cannot read properties of undefined (reading 'trim')
+2024-05-19 18:46:38 error: Internal server error: Cast to ObjectId failed for value "{ _id: 'owner' }" (type Object) at path "_id" for model "Blog"
+2024-05-19 18:49:31 error: Blog creation failed: Title 'Test Blog' already exists.
+2024-05-20 00:15:03 error: Blog creation failed: Title 'Testing Blog' already exists.
+2024-05-20 00:22:43 error: Internal server error: Cast to ObjectId failed for value "{ _id: 'owner' }" (type Object) at path "_id" for model "Blog"
+2024-05-20 00:34:43 error: Failed to update blog with id 664a2a231d382e98ba0404bc: Cannot read properties of undefined (reading 'toString')
+2024-05-20 00:42:22 error: Failed to update blog with id 664a2beef82bd04566666fb5: Cannot read properties of undefined (reading 'toString')
+2024-05-20 00:42:22 error: Internal server error: Cast to ObjectId failed for value "{ _id: 'owner' }" (type Object) at path "_id" for model "Blog"

@@ -5,8 +5,7 @@ require("dotenv").config();
 const userRoute = require("./routes/user");
 const blogRoute = require("./routes/blog");
 mongoose.set("strictQuery", true);
-mongoose
-  .connect(process.env.MONGO_URI)
+mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log("connected to db"))
   .catch((err) => console.log(err));
 
@@ -19,6 +18,14 @@ app.use(express.json());
 app.use("/user", userRoute);
 app.use("/blog", blogRoute);
 
-app.listen(process.env.PORT, () => {
-  console.log(`Backend server is running on port ${process.env.PORT}`);
-});
+// app.listen(process.env.PORT, () => {
+//   console.log(`Backend server is running on port ${process.env.PORT}`);
+// });
+// Start the server only if not in test environment
+if (process.env.NODE_ENV !== 'test') {
+  app.listen(process.env.PORT, () => {
+    console.log(`Backend server is running on port ${process.env.PORT}`);
+  });
+}
+
+module.exports = app;
