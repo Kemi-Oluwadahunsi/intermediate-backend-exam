@@ -182,7 +182,7 @@ This includes routes for user registration and login. A JWT token is generated a
     Response
    ```json
    {
-       "message": "Fetched all published blogs",
+       "message": "Blog created successfully",
        "data": [
            {
                "_id": "66479b562dd1b1e64f0b45c0",
