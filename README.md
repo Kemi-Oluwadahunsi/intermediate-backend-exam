@@ -471,7 +471,7 @@ module.exports = User;
 
 ## ERD
 This shows the relationship between the user and the blog creation. A user can create as many blogs as possible, and can perform blog operations.
-<img src="https://res.cloudinary.com/dee9teadk/image/upload/v1716099677/ERD_ftzn8c.png" alt="ERD_Image" />
+<img src="https://res.cloudinary.com/dee9teadk/image/upload/v1716182728/ERD2_ykq0do.png" alt="ERD_Image" />
 
 ## Testing Endpoints
 - Use tools like Postman or curl to test API endpoints.
