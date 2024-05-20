@@ -114,7 +114,8 @@ This includes routes for user registration and login. A JWT token is generated a
         "updatedAt": "2024-05-17T16:29:00.728Z",
         "__v": 0
     },
-    "token": "eyJhbGciOiJIUzI1NiIsInR5c................................"}```
+    "token": "eyJhbGciOiJIUzI1NiIsInR5c................................"}
+    
 
 
 ### Blog Routes
@@ -202,10 +203,10 @@ This includes routes for user registration and login. A JWT token is generated a
                "__v": 0
            },
            {
-               ........................
+              
            },
            {
-              .........................
+              
            }
        ]
    }
@@ -472,11 +473,11 @@ module.exports = User;
 This shows the relationship between the user and the blog creation. A user can create as many blogs as possible, and can perform blog operations.
 <img src="https://res.cloudinary.com/dee9teadk/image/upload/v1716099677/ERD_ftzn8c.png" alt="ERD_Image" />
 
-## Testing
+## Testing Endpoints
 - Use tools like Postman or curl to test API endpoints.
 - Ensure proper authentication and authorization for protected routes.
 
-##Testing With Jest
+## Testing With Jest
 1. Install Dependencies: Be sure to have installed dependencies by running npm install.
 2. Run this command in terminal
 ```javascript
@@ -573,6 +574,9 @@ describe("User Controller", () => {
   });
 });
 ```
+
+## Winston Logger
+Winston is a versatile logging library for Node.js that provides flexibility and customization options. I used Winston in this API for logging within the application to record various events, messages, and errors.
 
 ## License
 This project is licensed under the [MIT License](LICENSE).
