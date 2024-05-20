@@ -114,7 +114,8 @@ This includes routes for user registration and login. A JWT token is generated a
         "updatedAt": "2024-05-17T16:29:00.728Z",
         "__v": 0
     },
-    "token": "eyJhbGciOiJIUzI1NiIsInR5c................................"}```
+    "token": "eyJhbGciOiJIUzI1NiIsInR5c................................"}
+    
 
 
 ### Blog Routes
@@ -182,7 +183,7 @@ This includes routes for user registration and login. A JWT token is generated a
     Response
    ```json
    {
-       "message": "Blog created successfully",
+       "message": "Fetched all published blogs",
        "data": [
            {
                "_id": "66479b562dd1b1e64f0b45c0",
@@ -202,10 +203,10 @@ This includes routes for user registration and login. A JWT token is generated a
                "__v": 0
            },
            {
-               ........................
+              
            },
            {
-              .........................
+              
            }
        ]
    }
@@ -472,9 +473,110 @@ module.exports = User;
 This shows the relationship between the user and the blog creation. A user can create as many blogs as possible, and can perform blog operations.
 <img src="https://res.cloudinary.com/dee9teadk/image/upload/v1716099677/ERD_ftzn8c.png" alt="ERD_Image" />
 
-## Testing
+## Testing Endpoints
 - Use tools like Postman or curl to test API endpoints.
 - Ensure proper authentication and authorization for protected routes.
+
+## Testing With Jest
+1. Install Dependencies: Be sure to have installed dependencies by running npm install.
+2. Run this command in terminal
+```javascript
+npm test
+```
+3. The tests are organized into different files within the tests directory. Each file contains tests for specific parts of the application like the user and blog controller files.
+### Example of user test file
+```javascript
+const request = require('supertest');
+const app = require('../app'); // Adjust the path as necessary
+
+describe("User Controller", () => {
+  describe("POST /user/register", () => {
+    test("It should register a new user", async () => {
+      const response = await request(app).post("/user/register").send({
+        first_name: "Kemi",
+        last_name: "Dahunsi",
+        email: "kemilat50@gmail.com",
+        password: "Bethel2018",
+      });
+      expect(response.statusCode).toBe(201);
+      expect(response.body.message).toBe("Registration completed");
+    });
+
+    test("It should return an error if required fields are missing", async () => {
+      const response = await request(app).post("/user/register").send({
+        first_name: "Kemi",
+        last_name: "Dahunsi",
+        password: "Bethel2018",
+      });
+      expect(response.statusCode).toBe(400);
+      expect(response.body.error).toBeTruthy();
+    });
+
+    test("It should return an error if email already exists", async () => {
+      await request(app).post("/user/register").send({
+        first_name: "Kemi",
+        last_name: "Dahunsi",
+        email: "kemilat50@gmail.com",
+        password: "Bethel2018",
+      });
+
+      const response = await request(app).post("/user/register").send({
+        first_name: "Kemi",
+        last_name: "Dahunsi",
+        email: "kemilat50@gmail.com",
+        password: "Bethel2018",
+      });
+      expect(response.statusCode).toBe(400);
+      expect(response.body.error).toBeTruthy();
+    });
+  });
+
+  describe("POST /user/login", () => {
+    test("It should login a user with correct credentials", async () => {
+      await request(app).post("/user/register").send({
+        first_name: "Kemi",
+        last_name: "Dahunsi",
+        email: "kemilat50@gmail.com",
+        password: "Bethel2018",
+      });
+
+      const response = await request(app).post("/user/login").send({
+        email: "kemilat50@gmail.com",
+        password: "Bethel2018",
+      });
+      expect(response.statusCode).toBe(200);
+      expect(response.body.message).toBe("Login successful");
+    });
+
+    test("It should return an error if email or password is missing", async () => {
+      const response = await request(app).post("/user/login").send({
+        email: "kemilat50@gmail.com",
+      });
+      expect(response.statusCode).toBe(400);
+      expect(response.body.error).toBeTruthy();
+    });
+
+    test("It should return an error if credentials are incorrect", async () => {
+      await request(app).post("/user/register").send({
+        first_name: "Kemi",
+        last_name: "Dahunsi",
+        email: "kemilat50@gmail.com",
+        password: "Bethel2018",
+      });
+
+      const response = await request(app).post("/user/login").send({
+        email: "kemilat50@gmail.com",
+        password: "wrongpassword",
+      });
+      expect(response.statusCode).toBe(400);
+      expect(response.body.error).toBeTruthy();
+    });
+  });
+});
+```
+
+## Winston Logger
+Winston is a versatile logging library for Node.js that provides flexibility and customization options. I used Winston in this API for logging within the application to record various events, messages, and errors.
 
 ## License
 This project is licensed under the [MIT License](LICENSE).
