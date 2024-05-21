@@ -199,7 +199,9 @@ const updateBlogState = async (req, res) => {
     }
 
     if (blog.author.toString() !== userId) {
-      logger.error(`User with id ${userId} is not authorized to update this blog's state`);
+      logger.error(
+        `User with id ${userId} is not authorized to update this blog's state`
+      );
       return res
         .status(403)
         .json({ error: "You are not authorized to update this blog" });
@@ -228,21 +230,25 @@ const updateBlogState = async (req, res) => {
 const deleteBlog = async (req, res) => {
   const userId = req.user.id;
   const blogId = req.params.id;
+
   try {
     const blog = await Blog.findById(blogId);
+
     if (!blog) {
       logger.error(`Blog with id ${blogId} not found`);
       return res.status(404).json({ error: "Blog not found" });
     }
 
     if (blog.author.toString() !== userId) {
-      logger.error(`User with id ${userId} is not authorized to delete this blog`);
+      logger.error(
+        `User with id ${userId} is not authorized to delete this blog`
+      );
       return res
         .status(403)
         .json({ error: "You are not authorized to delete this blog" });
     }
 
-    await blog.remove();
+    await Blog.findByIdAndDelete(blogId);
     logger.info(`Blog with id ${blogId} deleted successfully`);
     res.status(200).json({ message: "Blog deleted successfully" });
   } catch (error) {
@@ -252,6 +258,7 @@ const deleteBlog = async (req, res) => {
       .json({ error: error.message, message: "Internal server error" });
   }
 };
+
 const getUserBlogs = async (req, res) => {
   const userId = req.user.id;
 
@@ -269,7 +276,7 @@ const getUserBlogs = async (req, res) => {
     const blogs = await Blog.find(filter, null, paginationOptions);
 
     const totalBlogs = await Blog.find(filter).count();
-logger.info(`Retrieved ${blogs.length} blogs for user with id ${userId}`);
+    logger.info(`Retrieved ${blogs.length} blogs for user with id ${userId}`);
     res.status(200).json({
       message: "All available blogs",
       data: blogs,
@@ -277,7 +284,9 @@ logger.info(`Retrieved ${blogs.length} blogs for user with id ${userId}`);
       currentPage: parseInt(page),
     });
   } catch (error) {
-    logger.error(`Failed to retrieve blogs for user with id ${userId}: ${error.message}`);
+    logger.error(
+      `Failed to retrieve blogs for user with id ${userId}: ${error.message}`
+    );
     res
       .status(500)
       .json({ error: error.message, message: "Internal server error" });
