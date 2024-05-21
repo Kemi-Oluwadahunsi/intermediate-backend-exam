@@ -259,12 +259,49 @@ const deleteBlog = async (req, res) => {
   }
 };
 
+// const getUserBlogs = async (req, res) => {
+//   const userId = req.user.id;
+
+//   const { page = 1, limit = 10, state } = req.query;
+//   try {
+//     let filter = { author: userId };
+//     if (state) {
+//       filter.state = state;
+//     }
+
+//     const paginationOptions = {
+//       limit: parseInt(limit),
+//       skip: (parseInt(page) - 1) * parseInt(limit),
+//     };
+//     const blogs = await Blog.find(filter, null, paginationOptions);
+
+//     const totalBlogs = await Blog.find(filter).count();
+//     logger.info(`Retrieved ${blogs.length} blogs for user with id ${userId}`);
+//     res.status(200).json({
+//       message: "All available blogs",
+//       data: blogs,
+//       totalPages: Math.ceil(totalBlogs / parseInt(limit)),
+//       currentPage: parseInt(page),
+//     });
+//   } catch (error) {
+//     logger.error(
+//       `Failed to retrieve blogs for user with id ${userId}: ${error.message}`
+//     );
+//     res
+//       .status(500)
+//       .json({ error: error.message, message: "Internal server error" });
+//   }
+// };
+
 const getUserBlogs = async (req, res) => {
   const userId = req.user.id;
 
   const { page = 1, limit = 10, state } = req.query;
   try {
-    let filter = { author: userId };
+ 
+    const authorId = mongoose.Types.ObjectId(userId);
+
+    let filter = { author: authorId };
     if (state) {
       filter.state = state;
     }
